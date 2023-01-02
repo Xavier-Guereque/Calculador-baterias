@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Calculador Baterías</title>
+        <link rel="icon" href="https://www.syscom.mx/favico/syscom_favico.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link href="estilos/estilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="estilos/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="scripts/script.js"></script>
+    </head>
+
+    <body style='background:#f5f5f5;'>
+        <div class='barra_superior'>
+            <img src='imagenes/syscom.svg' style='padding:16px; width: 190px;'>
+        </div>
+        <div class="x_contenido">
+            <div class="x_cuadro1">
+                <div style='text-align: center; margin-bottom: 10px; padding-bottom: 5px;'>
+                    <h3>Calculador de Baterías de Respaldo</h3>
+                </div>
+                
+                <div class="x_subcuadro" style="margin-left: 1%; margin-top: 10px;">
+                    <span class="x_subtitulo">Cantidad</span><span class='x_campo_obligatorio'>*</span><br>
+                    <input type="number" id="x_cantidad1" maxlength="" onchange="f_directa(1)">
+                </div>
+                <div class="x_subcuadro otros">
+                    <span class="x_subtitulo">Tipo de corriente</span><span class='x_campo_obligatorio'>*</span><br>
+                    <select id="x_tipo_corriente1" style="cursor: pointer;">
+                        <option value=""></option>
+                        <option value="1">Directa</option>
+                        <option value="2">Alterna</option>
+                    </select>
+                </div>
+                <div class="x_subcuadro otros">
+                    <span class="x_subtitulo">Voltaje (volts)</span><span class='x_campo_obligatorio'>*</span><br>
+                    <select id="x_voltaje1" style="cursor: pointer;" onchange="f_directa(1)">
+                        <option value=""></option>
+                        <option value=12>12</option>
+                        <option value=24>24</option>
+                    </select>
+                </div>
+                <div class="x_subcuadro" style="margin-left: 1%;">
+                    <span class="x_subtitulo">Corriente (amperes)</span><span class='x_campo_obligatorio'>*</span><br>
+                    <input type="number" id="x_corriente1" maxlength="" onchange="f_directa(1)">
+                </div>
+                <div class="x_subcuadro">
+                    <span class="x_subtitulo">Potencia (watts)</span><br>
+                    <input type="number" id="x_potencia1" style="cursor: not-allowed;" disabled>
+                </div>
+                <div class="x_subcuadro">
+                    <span class="x_subtitulo">Sumatoria de watts</span><br>
+                    <input type="number" id="x_suma_watts1" style="cursor: not-allowed;" disabled>
+                </div>
+                <div style="text-align: right; padding-bottom: 5px">
+                    <img class="icono toRotate" src="imagenes/icons8-más-50.png" alt="" onclick="agregar_directa()">
+                </div>
+                <span id="agregar_directa1"></span>
+
+                <!--AQUIIIIIIIII
+                <div class="x_subcuadro" style="margin-left: 1%; margin-top: 10px;">
+                    <span class="x_subtitulo">Cantidad</span><span class='x_campo_obligatorio'>*</span><br>
+                    <input type="number" id="x_cantidad1" maxlength="">
+                </div>
+                <div class="x_subcuadro otros">
+                    <span class="x_subtitulo">Tipo de corriente</span><span class='x_campo_obligatorio'>*</span><br>
+                    <select id="x_tipo_corriente1" style="cursor: pointer;">
+                        <option value=""></option>
+                        <option value="1">Directa</option>
+                        <option value="2">Alterna</option>
+                    </select>
+                </div>
+                <div class="x_subcuadro otros">
+                    <span class="x_subtitulo">Potencia (watts)</span><span class='x_campo_obligatorio'>*</span><br>
+                    <input type="number" id="x_potencia1" maxlength="">
+                </div>
+                <div class="x_subcuadro" style="margin-left: 1%; float: none;">
+                    <span class="x_subtitulo">Sumatoria de watts</span><br>
+                    <input type="number" id="x_suma_watts1" style="cursor: not-allowed;" disabled>
+                </div>
+                <div style="text-align: right; padding-bottom: 5px">
+                    <img class="icono toRotate" src="imagenes/icons8-más-50.png" alt="" onclick="agregar_alterna()">
+                </div>
+                <span id="agregar_alterna1"></span>
+                -->
+
+                <div class="x_subcuadro" style="margin-left: 1%; margin-top: 10px;">
+                    <span class="x_subtitulo">Watts totales</span>
+                    <input type="number" id="x_watts_totales" style="cursor: not-allowed;" disabled>
+                </div>
+                <div class="x_subcuadro otros">
+                    <span class="x_subtitulo">Factor de seguridad (20%)</span>
+                    <input type="number" id="x_factor_seguridad" style="cursor: not-allowed;" disabled>
+                </div>
+                <div class="x_subcuadro otros">
+                    <span class="x_subtitulo">Consumo de amperes</span>
+                    <input type="number" id="x_consumo_amperes" style="cursor: not-allowed;" disabled>
+                </div>
+                <div class="x_subcuadro" style="margin-left: 1%; float: none;">
+                    <span class="x_subtitulo">Tiempo de respaldo (hrs)</span>
+                    <input type="number" id="x_tiempo_respaldo" style="cursor: not-allowed;" disabled>
+                </div>
+
+                <div class="x_subcuadro" style='margin-top: 40px; margin-left: 1%;'>
+                    <span class="x_subtitulo">Capacidad de la batería en Ah</span><span class='x_campo_obligatorio'>*</span>
+                    <select id="x_capacidad_bateria" style="cursor: pointer;" onchange="f_watts_totales()">
+                        <option value=""></option>
+                        <option value=1.2>1.2</option>
+                        <option value=4.5>4.5</option>
+                        <option value=5>5</option>
+                        <option value=7>7</option>
+                        <option value=9>9</option>
+                        <option value=12>12</option>
+                        <option value=18>18</option>
+                        <option value=26>26</option>
+                        <option value=40>40</option>
+                        <option value=55>55</option>
+                        <option value=75>75</option>
+                        <option value=100>100</option>
+                        <option value=110>110</option>
+                    </select>
+                </div>
+                <div class="x_subcuadro cambio">
+                    <span class="x_subtitulo">Tiempo respaldo requerido (hrs)</span><span class='x_campo_obligatorio'>*</span>
+                    <input type="number" id="x_tiempo_respaldo_requerido" maxlength="" onchange="f_watts_totales()">
+                </div>
+                <div class="x_subcuadro cambio">
+                    <span class="x_subtitulo">Número de baterías a utilizar</span>
+                    <input type="number" id="x_baterias" style="cursor: not-allowed;" disabled>
+                </div>
+
+                <div class="final">
+                    <input type="text" id="x_resultado" class="resultado" style="width: 98.5%; height: 35px; text-align: center; color: #fff; font-size: 16px; margin-top: 30px;" disabled>
+                </div>
+
+                <!--<div class="x_subcuadro" style='margin-top:10px;'>
+                    <span id="x_resultado" style="width: 100%; height: 35px;" onclick="x_guardar()">Se necesitan X baterías de Y Ah.</span>
+                </div>-->
+            </div>
+        </div>
+    </body>
+
+</html>

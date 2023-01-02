@@ -1,0 +1,163 @@
+h1, h2, h3, h4, h5, h6 
+{
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+}
+
+h3
+{
+    font-size: 24px;
+    width: 100%;
+}
+
+.barra_superior
+{
+    background-color: #3c3c3c;
+    border-color: #7B7B7B;
+    border-bottom: none;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+}
+
+.x_contenido
+{
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10%;
+    font-family: sans-serif;
+    font-size: 14px;
+    height: auto;
+    background: rgb(249, 249, 249);
+    box-shadow: rgba(130, 130, 130, 0.43) 1px 1px 23px 1px;
+    min-height: calc(100vh - 283px);
+    padding-bottom: 10px;
+    padding: 50px 15px 10px;
+}
+
+input, select
+{
+    height: 31px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 95%;
+}
+
+/*textarea
+{
+    resize: vertical;
+    height: 6%;
+}*/
+
+#x_resultado
+{
+    width: 5%;
+    padding: initial;
+}
+
+.resultado
+{
+    color: #fff;
+    background-color: #005CB9;
+    border-color: #004fa0;
+}
+
+.x_campo_obligatorio
+{
+    color:red;
+    font-weight: bold;
+}
+
+.x_subcuadro
+{
+    padding-bottom: 5px;
+    width: 33%;
+    float: left;
+}
+
+/*#x_referencia
+{
+    width: 94%;
+}*/
+
+::placeholder 
+{ 
+    color: #fff;
+}
+
+.icono
+{
+    height: 31px;
+    cursor: pointer;
+    margin-right: 1%;
+}
+
+/*.toRotate
+{
+    transition: 0.5s;
+}
+
+.rotate
+{
+    transform: rotate(45deg);
+}*/
+
+.otros
+{
+    margin-top: 10px;
+}
+
+.cambio
+{
+    margin-top: 40px;
+}
+
+.final
+{
+    padding-bottom: 5px;
+    margin-top: 35px;
+    margin-left: 1%;
+}
+
+@media only screen and (max-width: 600px) 
+{
+    input, select
+    {
+        width: 99%;
+        
+    }
+
+    .x_subcuadro
+    {
+        width: 100%;
+        margin-left: 1%;
+    }
+
+    .otros
+    {
+        margin-top: 0;
+    }
+
+    .cambio
+    {
+        margin-top: 0;
+    }
+
+    .final
+    {
+        margin-top: 5px;
+    }
+
+    #x_resultado
+    {
+        width: 11%;
+        padding: 6px;
+    }
+  }
