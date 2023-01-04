@@ -24,67 +24,17 @@
                 
                 <div class="x_subcuadro" style="margin-left: 1%; margin-top: 10px;">
                     <span class="x_subtitulo">Cantidad</span><span class='x_campo_obligatorio'>*</span><br>
-                    <input type="number" id="x_cantidad1" maxlength="" onchange="f_directa(1)">
-                </div>
-                <div class="x_subcuadro otros">
-                    <span class="x_subtitulo">Tipo de corriente</span><span class='x_campo_obligatorio'>*</span><br>
-                    <select id="x_tipo_corriente1" style="cursor: pointer;">
-                        <option value=""></option>
-                        <option value="1">Directa</option>
-                        <option value="2">Alterna</option>
-                    </select>
-                </div>
-                <div class="x_subcuadro otros">
-                    <span class="x_subtitulo">Voltaje (volts)</span><span class='x_campo_obligatorio'>*</span><br>
-                    <select id="x_voltaje1" style="cursor: pointer;" onchange="f_directa(1)">
-                        <option value=""></option>
-                        <option value=12>12</option>
-                        <option value=24>24</option>
-                    </select>
-                </div>
-                <div class="x_subcuadro" style="margin-left: 1%;">
-                    <span class="x_subtitulo">Corriente (amperes)</span><span class='x_campo_obligatorio'>*</span><br>
-                    <input type="number" id="x_corriente1" maxlength="" onchange="f_directa(1)">
-                </div>
-                <div class="x_subcuadro">
-                    <span class="x_subtitulo">Potencia (watts)</span><br>
-                    <input type="number" id="x_potencia1" style="cursor: not-allowed;" disabled>
-                </div>
-                <div class="x_subcuadro">
-                    <span class="x_subtitulo">Sumatoria de watts</span><br>
-                    <input type="number" id="x_suma_watts1" style="cursor: not-allowed;" disabled>
-                </div>
-                <div style="text-align: right; padding-bottom: 5px">
-                    <img class="icono toRotate" src="imagenes/icons8-más-50.png" alt="" onclick="agregar_directa()">
-                </div>
-                <span id="agregar_directa1"></span>
-
-                <!--AQUIIIIIIIII
-                <div class="x_subcuadro" style="margin-left: 1%; margin-top: 10px;">
-                    <span class="x_subtitulo">Cantidad</span><span class='x_campo_obligatorio'>*</span><br>
                     <input type="number" id="x_cantidad1" maxlength="">
                 </div>
                 <div class="x_subcuadro otros">
                     <span class="x_subtitulo">Tipo de corriente</span><span class='x_campo_obligatorio'>*</span><br>
-                    <select id="x_tipo_corriente1" style="cursor: pointer;">
+                    <select id="x_tipo_corriente1" style="cursor: pointer;" onchange="f_tipo_corriente()">
                         <option value=""></option>
                         <option value="1">Directa</option>
                         <option value="2">Alterna</option>
                     </select>
                 </div>
-                <div class="x_subcuadro otros">
-                    <span class="x_subtitulo">Potencia (watts)</span><span class='x_campo_obligatorio'>*</span><br>
-                    <input type="number" id="x_potencia1" maxlength="">
-                </div>
-                <div class="x_subcuadro" style="margin-left: 1%; float: none;">
-                    <span class="x_subtitulo">Sumatoria de watts</span><br>
-                    <input type="number" id="x_suma_watts1" style="cursor: not-allowed;" disabled>
-                </div>
-                <div style="text-align: right; padding-bottom: 5px">
-                    <img class="icono toRotate" src="imagenes/icons8-más-50.png" alt="" onclick="agregar_alterna()">
-                </div>
-                <span id="agregar_alterna1"></span>
-                -->
+                <span id="tipo_corriente"></span>
 
                 <div class="x_subcuadro" style="margin-left: 1%; margin-top: 10px;">
                     <span class="x_subtitulo">Watts totales</span>
@@ -135,9 +85,7 @@
                     <input type="text" id="x_resultado" class="resultado" style="width: 98.5%; height: 35px; text-align: center; color: #fff; font-size: 16px; margin-top: 30px;" disabled>
                 </div>
 
-                <!--<div class="x_subcuadro" style='margin-top:10px;'>
-                    <span id="x_resultado" style="width: 100%; height: 35px;" onclick="x_guardar()">Se necesitan X baterías de Y Ah.</span>
-                </div>-->
+                <span class="restaurar" onclick="location.reload()">Restaurar</span>
             </div>
         </div>
     </body>

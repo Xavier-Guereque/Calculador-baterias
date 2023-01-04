@@ -50,12 +50,6 @@ input, select
     width: 95%;
 }
 
-/*textarea
-{
-    resize: vertical;
-    height: 6%;
-}*/
-
 #x_resultado
 {
     width: 5%;
@@ -82,11 +76,6 @@ input, select
     float: left;
 }
 
-/*#x_referencia
-{
-    width: 94%;
-}*/
-
 ::placeholder 
 { 
     color: #fff;
@@ -98,16 +87,6 @@ input, select
     cursor: pointer;
     margin-right: 1%;
 }
-
-/*.toRotate
-{
-    transition: 0.5s;
-}
-
-.rotate
-{
-    transform: rotate(45deg);
-}*/
 
 .otros
 {
@@ -124,6 +103,22 @@ input, select
     padding-bottom: 5px;
     margin-top: 35px;
     margin-left: 1%;
+}
+
+hr
+{
+    width: 97.3%;
+    padding-bottom: 5px;
+    margin-left: 1%;
+    float: left;
+}
+
+.restaurar
+{
+    margin-left: 45%;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 12px;
 }
 
 @media only screen and (max-width: 600px) 
@@ -159,5 +154,15 @@ input, select
     {
         width: 11%;
         padding: 6px;
+    }
+
+    hr
+    {
+        width: 98.5%;
+    }
+
+    .restaurar
+    {
+        margin-left: 40%;
     }
   }
