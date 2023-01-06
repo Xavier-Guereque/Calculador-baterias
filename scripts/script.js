@@ -29,7 +29,7 @@ function f_tipo_corriente()
         "</div>"+
         /*"<div style='width: 100%; height: 15px; float left;'></div>"+*/
         "<div style='text-align: right; padding-bottom: 5px'>"+
-            "<img id='icono1' class='icono' src='imagenes/icons8-más-50.png' alt='' onclick='agregar_directa(), desaparecer(1)'>"+
+            "<img id='icono1' class='icono' src='imagenes/icono-mas.png' alt='' onclick='agregar_directa(), desaparecer(1)'>"+
             "<hr id='separador1' style='border-top: 1px solid #ccc; display: none;'>"+
         "</div>"+
         "<span id='agregar_directa1'></span>"
@@ -48,7 +48,7 @@ function f_tipo_corriente()
             "<input type='number' id='x_suma_watts1' style='cursor: not-allowed;' disabled>"+
         "</div>"+
         "<div style='text-align: right; padding-bottom: 5px'>"+
-            "<img id='icono1' class='icono' src='imagenes/icons8-más-50.png' alt='' onclick='agregar_alterna(), desaparecer(1)'>"+
+            "<img id='icono1' class='icono' src='imagenes/icono-mas.png' alt='' onclick='agregar_alterna(), desaparecer(1)'>"+
             "<hr id='separador1' style='border-top: 1px solid #ccc; display: none;'>"+
         "</div>"+
         "<span id='agregar_alterna1'></span>"
